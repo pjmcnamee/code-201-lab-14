@@ -7,7 +7,7 @@ table.addEventListener('click', removeItemFromCart);
 var cart;
 
 function loadCart() {
-  var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  var cartItems = JSON.parse(localStorage.getItem('order_placed')) || [];
   cart = new Cart(cartItems);
 }
 
@@ -23,9 +23,13 @@ function clearCart() {}
 
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
-
+  fpr(var i = 0 ; i < items.length; i++){
+    var tdEl = document.getElementById('cart');
+    tdEl.textContent = cart;
+    tdEl.appendChild(trEl);
+  } 
   // TODO: Find the table body
-
+    ('cart')
   // TODO: Iterate over the items in the cart
   // TODO: Create a TR
   // TODO: Create a TD for the delete link, quantity,  and the item
